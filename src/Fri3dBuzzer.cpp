@@ -2,6 +2,7 @@
 #include "Arduino.h"
 
 Fri3dBuzzer::Fri3dBuzzer() {
+  pinMode(BUZZER_PIN, OUTPUT);
   ledcSetup( 0, 3000, 8 );
   setVolume( 255 );
   ledcAttachPin(BUZZER_PIN, 0);
