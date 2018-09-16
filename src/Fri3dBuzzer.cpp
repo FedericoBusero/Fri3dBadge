@@ -4,7 +4,7 @@
 Fri3dBuzzer::Fri3dBuzzer() {
   ledcSetup( 0, 3000, 8 );
   setVolume( 255 );
-  ledcAttachPin(33, 0);
+  ledcAttachPin(BUZZER_PIN, 0);
 }
 
 void 
