@@ -2,10 +2,10 @@
 // it is used both for testing the badge's hardware and to serve as a default demo of what the badge can do
 // if you want to learn how to program the badge, it is recommended to look at the basic examples first
 
-#include <Fri3dMatrix.h>
-#include <Fri3dAccelerometer.h>
-#include <Fri3dBuzzer.h>
-#include <Fri3dButtons.h>
+#include "Fri3dMatrix.h"
+#include "Fri3dAccelerometer.h"
+#include "Fri3dBuzzer.h"
+#include "Fri3dButtons.h"
 
 Fri3dAccelerometer accel = Fri3dAccelerometer();
 Fri3dMatrix matrix = Fri3dMatrix();
