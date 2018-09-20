@@ -148,6 +148,33 @@ void Fri3dMatrix::drawString(int x_offset, String s, int value) {
   }
 }
 
+void Fri3dMatrix::showbitmap_progmem(const PROGMEM uint16_t *bitmap )
+{
+  for (int row = 0; row < 5; ++row)
+  {
+    uint16_t linebits  = pgm_read_word_near(&(bitmap[row]));
+
+    for (int count = 0; count < 14; ++count)
+    {
+      int bit = (linebits & (0b1 << (13 - count))) >> (13 - count);
+      buffer[row][count]=bit;
+    }
+  }
+}
+
+void Fri3dMatrix::showbitmap(const uint16_t *bitmap )
+{
+  for (int row = 0; row < 5; ++row)
+  {
+    uint16_t linebits = bitmap[row];
+    for (int count = 0; count < 14; ++count)
+    {
+      int bit = (linebits & (0b1 << (13 - count))) >> (13 - count);
+      buffer[row][count]=bit;
+    }
+  }
+}
+
 void Fri3dMatrix::render( int delay ) const {
   for( int row = 0; row < 5; row++ ) {
 
