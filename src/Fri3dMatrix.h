@@ -21,6 +21,8 @@ public:
   
   void drawCharacter( int x_offset , char c, int value = 1 );
   void drawString( int x_offset , String s, int value = 1 );
+  void showbitmap_progmem(const PROGMEM uint16_t *bitmap );
+  void showbitmap(const PROGMEM uint16_t *bitmap );
   
   void render( int delay = 0 ) const;
   void startRenderThread();
