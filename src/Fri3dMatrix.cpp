@@ -224,7 +224,7 @@ void Fri3dMatrix::startRenderThread() {
     this,                     /* parameter of the task */
     1,                        /* priority of the task */
     &(renderTask),              /* Task handle to keep track of created task */
-    0);                       /* Core */
+    1);                       /* Core */
 }
 
 void Fri3dMatrix::stopRenderThread() {
