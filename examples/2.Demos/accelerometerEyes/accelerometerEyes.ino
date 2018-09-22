@@ -1,7 +1,7 @@
 // eyes on the matrix move along with the accelerometer
 
-#include <Fri3dMatrix.h>
-#include <Fri3dAccelerometer.h>
+#include "Fri3dMatrix.h"
+#include "Fri3dAccelerometer.h"
 
 Fri3dAccelerometer accel = Fri3dAccelerometer();
 Fri3dMatrix matrix = Fri3dMatrix();
