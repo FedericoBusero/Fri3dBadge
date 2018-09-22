@@ -33,7 +33,7 @@ void loop() {
     for( int y = 1; y < 5; y++ )
       matrix.setPixel( x, y, 0 );
   
-    int x = 7 * ( event.acceleration.y + 15 ) / 30;
+    int x = 7 * ( -event.acceleration.y + 15 ) / 30;
     int y = 5 * ( event.acceleration.z + 15 ) / 30;
     matrix.setPixel( x, y , 1 );
     matrix.setPixel( 7 + x, y , 1 );
