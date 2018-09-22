@@ -205,7 +205,25 @@ void Fri3dMatrix::render( int delay ) const {
 
     vTaskDelay( delay );
   }
+  
+  if (delaytime > 0)
+  {
+    // clear last line
+    for ( int i = 0; i < 24; i++ ) {
+      shiftIntoRegister( 0 );
+    }
+    digitalWrite( LATCH_PIN, 0 );
+    digitalWrite( LATCH_PIN, 1 );
+
+    vTaskDelay( delaytime ); 
+  }
 }
+
+void Fri3dMatrix::setBrightness(int _brightness)
+{
+  delaytime = MATRIX_BRIGHTNESS_MAX - constrain(_brightness, 0, MATRIX_BRIGHTNESS_MAX);
+}
+
 
 void renderThread( void * parameter )
 {
