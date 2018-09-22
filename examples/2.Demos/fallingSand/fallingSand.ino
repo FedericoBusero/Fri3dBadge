@@ -2,8 +2,8 @@
 // Animated 'sand' ported for the Fri3d badge from https://learn.adafruit.com/animated-led-sand/code
 //--------------------------------------------------------------------------
 
-#include <Fri3dAccelerometer.h>
-#include <Fri3dMatrix.h>
+#include "Fri3dAccelerometer.h"
+#include "Fri3dMatrix.h"
 
 Fri3dAccelerometer accelerometer = Fri3dAccelerometer();
 Fri3dMatrix matrix = Fri3dMatrix();
