@@ -9,6 +9,8 @@
 #define DATA_PIN 2
 #define ENABLE_PIN 13
 
+#define MATRIX_BRIGHTNESS_MAX 16
+
 // library interface description
 class Fri3dMatrix {
 public:
@@ -27,6 +29,7 @@ public:
   void render( int delay = 0 ) const;
   void startRenderThread();
   void stopRenderThread();
+  void setBrightness(int _brightness);
   
 protected:
   int buffer[5][14];
