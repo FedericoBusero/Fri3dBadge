@@ -34,6 +34,7 @@ public:
 protected:
   int buffer[5][14];
   void shiftIntoRegister( int b ) const;
+  int delaytime;
 
 };
 
